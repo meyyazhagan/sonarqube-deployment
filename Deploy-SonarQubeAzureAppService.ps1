@@ -23,5 +23,5 @@ Expand-Archive -Path $outputFile -DestinationPath ..\wwwroot
 Write-Output 'Extraction complete'
 
 Write-Output 'Update Database connection string'
-Copy-Item -Path 'sonar.properties' -Destination ..\wwwroot\conf
+Copy-Item -Path 'sonar.properties' -Destination ..\wwwroot\conf\sonar.properties
 Write-Output 'Extraction complete'
