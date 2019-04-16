@@ -23,9 +23,9 @@ Expand-Archive -Path $outputFile -DestinationPath ..\wwwroot
 Write-Output 'Extraction complete'
 
 Write-Output 'Update Database connection string'
-new-item -Name ..\wwwroot\conf -ItemType directory
+# new-item -Name ..\wwwroot\conf -ItemType directory
 $dest = "..\wwwroot\sonarqube-7.7\conf\sonar.properties"
-Copy-Item -Path 'sonar.properties' -Destination $dest
-$destfile = "..\wwwroot\conf\sonar.properties"
-Copy-Item -Path 'sonar.properties' -Destination $destfile
+Copy-Item -Path 'sonar.properties' -Destination $dest -Recurse
+# $destfile = "..\wwwroot\conf\sonar.properties"
+# Copy-Item -Path 'sonar.properties' -Destination $destfile 
 Write-Output 'Extraction complete'
