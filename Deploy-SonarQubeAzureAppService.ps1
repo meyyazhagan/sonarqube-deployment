@@ -24,6 +24,8 @@ Write-Output 'Extraction complete'
 
 Write-Output 'Update Database connection string'
 new-item -Name ..\wwwroot\conf -ItemType directory
-$dest = "..\wwwroot\$($latestFile.href)\conf\sonar.properties"
+$dest = "..\wwwroot\sonarqube-7.7\conf\sonar.properties"
 Copy-Item -Path 'sonar.properties' -Destination $dest
+$destfile = "..\wwwroot\conf\sonar.properties"
+Copy-Item -Path 'sonar.properties' -Destination $destfile
 Write-Output 'Extraction complete'
